@@ -11,10 +11,18 @@ export default {
 * {
   margin: 0;
   padding: 0;  
+  
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Arvo', serif;
+	scroll-behavior: smooth;
 }
 
 #app {
-  background-color: black;
   width: 100vw;
   height: 100vh;
 }
