@@ -3,6 +3,7 @@
     <header>
       <img src="../assets/LRF(38).png" alt="header_image">
     </header>
+    {{}}
     <Menu></Menu>
     <TextContainer text="texto" color="var(--fresh-red)"></TextContainer>
     <img src="../assets/LRF(79).png" alt="header_image">
@@ -20,7 +21,7 @@
         <img src="../assets/tik_tok_logo.svg" alt="tik_tok_logo">
       </address>
       <address>
-        <h2>Insta</h2>
+        <h2>Instagram</h2>
         <img src="../assets/instagram_logo.svg" alt="insta_logo">
       </address>
     </footer>
@@ -31,7 +32,7 @@
 import TextContainer from '@/components/text-container.vue';
 import PlayerContainer from '@/components/player-container.vue';
 import VideoContainer from '@/components/video-container.vue';
-import Menu from '@/components/mobile-menu.vue'
+import Menu from '@/components/menu.vue'
 
 export default {
   name: 'HomeView',
@@ -39,8 +40,13 @@ export default {
     TextContainer,
     PlayerContainer,
     VideoContainer,
-    Menu
-  }
+    Menu,
+  },
+  data: function() {
+      return {
+          isDesktop: false
+      };
+    },
 }
 </script>
 
@@ -51,12 +57,22 @@ export default {
   background-color: var(--epic-black);
 }
 
-.home header img {
-  width: 100%;
+.home header {
+  height: 25vh;
+  overflow: hidden;
 }
 
-.home img{
-  width: 85%;
+.home header img {
+  width: 100%;
+  height: auto;
+}
+
+.home > img {
+  margin-top: 3rem;
+  width: 50%;
+  height: 40%;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 button {
@@ -65,6 +81,7 @@ button {
   background-color: var(--fresh-red);
   border-style: none;
   font-size: large;
+  font-weight: bold;
   color: var(--just-white);
   border-radius: 4px;
 }
@@ -86,11 +103,88 @@ address {
 
 .home footer h2 {
   color: var(--strong-red);
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .home footer img {
   width: 30%;
   height: 30%;
+}
+
+@media screen and (min-width: 760px) {
+
+  .home header {
+    height: 35vh;
+  }
+
+  .home header img {
+    position: relative;
+    top: -50px;
+  }
+
+  .home > img {
+    margin-top: 5rem;
+  }
+
+  button {
+    margin-top: 3rem;
+    width: 40vw;
+    padding: 2%;
+    font-size: xx-large;
+    border-radius: 4px;
+  }
+
+  footer {
+    margin-top: 3rem;
+  }
+
+  .home footer img {
+    width: 40%;
+    height: 40%;
+  }
+
+  footer address h2 {
+    font-size: large;
+    padding: 2%;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .home header {
+    height: 50vh;
+  }
+
+  .home header img {
+    position: relative;
+    top: -100px;
+  }
+
+  .home > img {
+    display: none;
+  }
+
+  button {
+    width: 20vw;
+    margin: 0 35%;
+    margin-top: 3rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+  }
+
+  .home footer img {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer address h2 {
+    font-size: xx-large;
+    padding: 10%;
+  }
+
 }
 </style>
