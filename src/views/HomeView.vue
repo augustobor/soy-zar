@@ -3,7 +3,6 @@
     <header>
       <img src="../assets/LRF(38).png" alt="header_image">
     </header>
-    {{}}
     <Menu></Menu>
     <TextContainer text="texto" color="var(--fresh-red)"></TextContainer>
     <img src="../assets/LRF(79).png" alt="header_image">
@@ -68,6 +67,7 @@ export default {
 }
 
 .home > img {
+  margin: 0 25%;
   margin-top: 3rem;
   width: 50%;
   height: 40%;
@@ -78,12 +78,14 @@ export default {
 button {
   width: 70vw;
   padding: 4%;
+  margin: 0 15%;
   background-color: var(--fresh-red);
   border-style: none;
   font-size: large;
   font-weight: bold;
   color: var(--just-white);
   border-radius: 4px;
+  text-align: center;
 }
 
 button:hover {
@@ -129,6 +131,7 @@ address {
   button {
     margin-top: 3rem;
     width: 40vw;
+    margin: 0 30%;
     padding: 2%;
     font-size: xx-large;
     border-radius: 4px;
@@ -168,7 +171,7 @@ address {
 
   button {
     width: 20vw;
-    margin: 0 35%;
+    margin: 0 39%;
     margin-top: 3rem;
   }
 

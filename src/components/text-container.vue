@@ -25,6 +25,7 @@ export default{
     width: auto;
     margin: 1rem 10%;
     margin-top: 4rem;
+    text-align: center;
 }
 
 .text-container > p{
@@ -40,7 +41,7 @@ export default{
         margin-top: 6rem;
     }
 
-    .text-container > p{
+    .text-container > p {
         font-size: xx-large;
     }
 

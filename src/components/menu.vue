@@ -1,22 +1,24 @@
 <template>
     <menu class="menu-mobile">
-        <img id="menuIcon" v-bind:src=this.icon @click="toggleIcon()" alt="hamburger-icon"/>
+        <!--img id="menuIcon" v-bind:src=this.icon @click="toggleIcon()" alt="hamburger-icon"/>-->
+		<img id="menuIcon" src='../assets/burger-menu.svg' @click="toggleIcon()" alt="hamburger-icon"/>
+		<img id="menuIcon" src='../assets/burger-menu.svg' @click="toggleIcon()" alt="hamburger-icon"/>
         <ul :class="[this.activate ? 'activate' : 'deactivate']" id="menu-content">
             <p><u>Menú</u></p>
-            <li><a href="#">Main</a></li>
-            <li><a href="./html/about.html">About me</a></li>
-            <li><a href="./html/portfolio.html">Portfolio</a></li>
+            <li><a href="./">Main</a></li>
+            <li><a href="./about">About me</a></li>
+            <li><a href="./portfolio">Portfolio</a></li>
             <li><a href="#">Posts</a></li>
-            <li><a href="./html/contact.html">Contact</a></li>
+            <li><a href="./contact">Contact</a></li>
         </ul>
     </menu>
 	<menu class="menu-desktop">
 		<ul id="menu-content">
-            <li><a href="#">Main</a></li>
-            <li><a href="./html/about.html">About me</a></li>
-            <li><a href="./html/portfolio.html">Portfolio</a></li>
+            <li><a href="./">Main</a></li>
+            <li><a href="./about">About me</a></li>
+            <li><a href="./portfolio">Portfolio</a></li>
             <li><a href="#">Posts</a></li>
-            <li><a href="./html/contact.html">Contact</a></li>
+            <li><a href="./contact">Contact</a></li>
         </ul>
 	</menu>
 </template>
@@ -32,7 +34,6 @@ export default {
     },
     methods: {
         toggleIcon() {
-			console.log('si')
 
 			if(this.icon == '../assets/burger-menu.svg') {
 				this.icon = '../assets/burger-menu-orange.svg';
@@ -55,17 +56,17 @@ export default {
 .menu-mobile {
 	width: 100%;
 	height: auto;
-	position: fixed;
-	top: 0px;
+	position:fixed;
+	top: 0;
 	left: -40vw;
 	transition: all .5s ease;
 	z-index: 1;
 }
 
-.home .menu-mobile img {
+.menu-mobile img {
 	cursor: pointer;
-	vertical-align: top;
 	width: 15%;
+	margin-left: 4.5rem;
 	transform: scale(1.5);
 	height: auto;
 }
